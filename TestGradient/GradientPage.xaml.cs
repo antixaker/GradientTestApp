@@ -7,11 +7,11 @@ namespace TestGradient
 {
     public partial class GradientPage : ContentPage
     {
-        public GradientPage ()
+        public GradientPage()
         {
-            InitializeComponent ();
-            StartColor = Color.Red;
-            EndColor = Color.Blue;
+            InitializeComponent();
+            StartColor = Color.Yellow;
+            EndColor = Color.Green;
         }
 
         public Color StartColor { get; set; }
