@@ -5,7 +5,7 @@ using Xamarin.Forms;
 using Renderers;
 using Android.Graphics;
 
-[assembly: ExportRenderer(typeof(GradientPage), typeof(GradientContentPageRenderer))]
+//[assembly: ExportRenderer(typeof(GradientPage), typeof(GradientContentPageRenderer))]
 namespace Renderers
 {
     public class GradientContentPageRenderer : PageRenderer
@@ -30,26 +30,26 @@ namespace Renderers
             base.DispatchDraw(canvas);
         }
 
-        protected override void OnElementChanged(ElementChangedEventArgs<Page> e)
-        {
-            base.OnElementChanged(e);
-
-            if (e.OldElement != null || Element == null)
-            {
-                return;
-            }
-
-            try
-            {
-                var page = e.NewElement as GradientPage;
-                this.StartColor = page.StartColor;
-                this.EndColor = page.EndColor;
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine(@"          ERROR: ", ex.Message);
-            }
-        }
+        //        protected override void OnElementChanged(ElementChangedEventArgs<Page> e)
+        //        {
+        //            base.OnElementChanged(e);
+        //
+        //            if (e.OldElement != null || Element == null)
+        //            {
+        //                return;
+        //            }
+        //
+        //            try
+        //            {
+        //                var page = e.NewElement as GradientPage;
+        //                this.StartColor = page.StartColor;
+        //                this.EndColor = page.EndColor;
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                System.Diagnostics.Debug.WriteLine(@"          ERROR: ", ex.Message);
+        //            }
+        //        }
 
     }
 }
