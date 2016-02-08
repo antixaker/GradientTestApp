@@ -50,11 +50,11 @@ namespace TestGradient.iOS.Effects
                     g.DrawRadialGradient(gradient, new CGPoint(0, 0), new nfloat(0), new CGPoint(100, 100), new nfloat(1000), CGGradientDrawingOptions.None);
                 }
 
-                UIImage im = UIGraphics.GetImageFromCurrentImageContext();
-                UIGraphics.EndImageContext();
 
-                var imageHolder = new UIImageView(im);
-                Container.AddSubview(imageHolder);
+                using (var im = UIGraphics.GetImageFromCurrentImageContext())
+                using (var imageHolder = new UIImageView(im))
+                    Container.AddSubview(imageHolder);
+                UIGraphics.EndImageContext();
             }
 
         }
