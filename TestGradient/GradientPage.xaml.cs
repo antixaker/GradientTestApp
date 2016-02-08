@@ -10,13 +10,12 @@ namespace TestGradient
         public GradientPage()
         {
             InitializeComponent();
-            StartColor = Color.Yellow;
-            EndColor = Color.Green;
+
+//            leibe.Effects.Add(Effect.Resolve("TestEffect.GradientEffect"));
+//            buton.Effects.Add(Effect.Resolve("TestEffect.GradientEffect"));
+            viewForEffect.Effects.Add(Effect.Resolve("TestEffect.GradientEffect"));
         }
 
-        public Color StartColor { get; set; }
-
-        public Color EndColor { get; set; }
     }
 }
 
