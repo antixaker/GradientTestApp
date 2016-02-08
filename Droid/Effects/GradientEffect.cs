@@ -23,7 +23,7 @@ namespace TestGradient.Droid.Effects
             }
             else
             {
-                throw new NotSupportedException("Element doesn't support this type of effect");
+                throw new NotSupportedException("Element doesn't support this type of effect. You must inherit element from GradientView.");
             }
         }
 
